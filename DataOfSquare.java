@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.awt.Color;
+
+public class DataOfSquare {
+
+	ArrayList<Color> C =new ArrayList<Color>();
+
+	int color; //2: snake , 1: food, 0:empty 
+
+	SquarePanel square;
+
+	public DataOfSquare(int col){
+
+		
+
+		//Vamos adicionar a cor ao arrayList
+
+		C.add(Color.pink);  //0
+
+		C.add(Color.red);    //1
+
+		C.add(Color.black);   //2
+
+		color=col;
+
+		square = new SquarePanel(C.get(color));
+
+	}
+
+	public void lightMeUp(int c){
+
+		square.ChangeColor(C.get(c));
+
+	}
+
+}
+
